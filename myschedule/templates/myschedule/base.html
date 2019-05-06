@@ -1,0 +1,16 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/myschedule.css' %}">
+</head>
+
+<body>
+    <h1><strong>스케줄 관리 홈페이지</strong></h1>
+    <img src={% static 'img/drawingofme.jpg' %} width="500px" height="150px" alt="">
+    <div>
+        <a href="{% url 'new' %}">스케줄 작성</a>
+        <a href="{% url 'home' %}">홈으로 가기</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <img src={% static 'img/cat.gif' %} height="300px" alt="">
+</body>

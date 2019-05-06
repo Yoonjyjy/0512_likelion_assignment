@@ -1,0 +1,10 @@
+{% extends "myschedule/base.html" %}
+
+{% block content%}
+    <h1>new schedule</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">저장</button>
+    </form>
+{% endblock %}

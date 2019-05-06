@@ -1,0 +1,14 @@
+{% extends "myschedule/base.html" %}
+
+{% block content%}
+    <h1>home</h1>
+    <a href="{% url 'new' %}">스케줄 추가</a>
+    {% for post in posts.all %}
+        <div>
+            <h2><a href = "{% url 'detail' post.id %}">{{post.title}}</a></h2>
+            <p>{{post.published_date}}</p>
+            <p>{{post.memo}}</p>
+            <p>기한 : {{post.schedule_date}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
